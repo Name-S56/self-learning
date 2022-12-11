@@ -3,14 +3,14 @@ void pao(int b[]);
 int main()
 {
 	int a[10],i;
-	printf("请输入10个数:\n");
+	printf("脟毛脢盲脠毛10赂枚脢媒:\n");
 	for(i=0;i<10;i++) 
 		scanf("%d",&a[i]);
-	printf("前\n");
+	printf("脟掳\n");
 	for(i=0;i<10;i++)
 		printf("%5d",a[i]);
 	pao(a);
-		printf("\n后\n");
+		printf("\n潞贸\n");
 	for(i=0;i<10;i++)
 		printf("%5d",a[i]);
 		
@@ -27,5 +27,5 @@ void pao(int b[])
 	b[j]=b[j+1];
 	b[j+1]=t;
 	}
-}
+}?
 
