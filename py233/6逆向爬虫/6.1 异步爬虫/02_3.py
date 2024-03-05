@@ -30,4 +30,3 @@ if __name__ == "__main__":
 
     loop.run_until_complete(asyncio.wait(tasks))
     loop.close()
-    

@@ -6,7 +6,7 @@
 import scrapy
 
 
-class NovelItem(scrapy.Item):
+class MidItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

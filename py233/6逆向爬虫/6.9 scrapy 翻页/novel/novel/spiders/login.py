@@ -11,8 +11,8 @@ class LoginSpider(scrapy.Spider):
     """
     # cookie 流程
     # cookie_str = "adasdas=dsda"
-
-    # def start_requests(self):
+    #"""字符串切割"""
+    def start_requests(self):
     #     lst = cookie_str.split(";")
     #     dic = {}
     #     for it in lst:
@@ -24,14 +24,13 @@ class LoginSpider(scrapy.Spider):
     #         cookies=dic
     #     )
 
-        #登陆流程
-    def start_requests(self):
+        #走登陆流程
         url = "xxx"
         username = "xxx"
         password = "xxx"
 
         # yield scrapy.Request(
-        # url = "login_url"
+        # url = "[login_url]"
         # method = 'post'
         # body=f"loginName={username}&password={password}"
         # callback=self.parse
@@ -43,7 +42,7 @@ class LoginSpider(scrapy.Spider):
             formdata={
                 "loginName": username,
                 "password":password 
-            },
+            },#字典 ""内取决于网站
             callback = self.parse
         )
     def parse(self, response):
@@ -51,5 +50,3 @@ class LoginSpider(scrapy.Spider):
     def parse_detail(self,resp):
         print(resp.text)
 
-
-       

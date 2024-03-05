@@ -15,4 +15,3 @@ if __name__ == "__main__":
         #event_loop执行协程对象,直到该对象内容执行完毕
     event_loop.run_until_complete(result)
 """
-    
