@@ -1,11 +1,17 @@
-import requests
- 
-def check_proxy(proxy):
-    try:
-        res = requests.get('https://zlibrary-asia.se/', proxies=proxy, timeout=5)
-        if res.status_code == 200:
-            return True
-        else:
-            return False
-    except:
-        return False
+# coding=utf-8
+
+# 输入两个正整数a,b
+a = int(input())
+b = int(input())
+
+# 请在此添加代码，求两个正整数的最小公倍数
+########## Begin ##########
+def lcm(x, y):
+    c =x*y
+    while (y != 0):
+        temp = y
+        y = x % y
+        x = temp
+    return c//x
+
+print(lcm(a,b))

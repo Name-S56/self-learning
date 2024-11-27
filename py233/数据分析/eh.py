@@ -13,6 +13,6 @@ img_src = todayweb.find("img").get("src")
 name = currentDateAndTime.day
 
 img_resp = requests.get(img_src)
-with open(f"C:/Users/a2950/Pictures/EH/{name}.jpg",mode="wb")as f:
+with open(f"C:/Users/ASUS/Pictures/{name}.jpg",mode="wb")as f:
     f.write(img_resp.content)
 print("下载完毕")
