@@ -5,7 +5,8 @@ from datetime import datetime
 url="https://e-hentai.org/news.php"
 resp = requests.get(url)
 resp.encoding="utf-8"
-
+if url:
+    print("页面步骤over")
 main_page = BeautifulSoup(resp.text,"html.parser")
 todayweb = main_page.find("div",attrs={"id":"botm"})
 img_src = todayweb.find("img").get("src")
@@ -20,4 +21,3 @@ with open(f"C:/Users/ASUS/Pictures/eh/{name}", mode="wb") as f:
     f.write(img_resp.content)
 print("下载完毕")
 # 等待用户输入以结束程序
-input("按 Enter 键退出程序...")
